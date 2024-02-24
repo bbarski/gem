@@ -1,8 +1,8 @@
-import menu_functions
-import menu_entries as me
+import cmd
+import inputs as inp
 
 def main_menu():
-    
+
     while True:
 
         title()
@@ -15,13 +15,13 @@ def main_menu():
             case "0":
                 exit()
             case "1":
-               install_sub_menu()
+                install_sub_menu()
             case "2":
-               game_dat_sub_menu()
+                games_dat_sub_menu()
             case "3":
-               print("not implemented")
+                print("not impleinpnted")
             case _:
-               menu_functions.cls()
+                cmd.cls()
 
 def install_sub_menu():
 
@@ -35,47 +35,50 @@ def install_sub_menu():
 
         match whatdo:
             case "A":
-               menu_functions.command(me.ADD_SUSETW_GAMES_REP)
-               menu_functions.command(me.ADD_SUSETW_GAMES_TOOLS_REP)
-               menu_functions.command(me.AAGPGKEYS)
+               cmd.do(inp.ADD_TW_GMS_REP)
+               cmd.do(inp.ADD_TW_GMS_TLS_REP)
+               cmd.do(inp.ACCPT_REP_GPGKEYS)
             case "B":
                main_menu() 
             case "0":
                 exit()
             case "1":
-               menu_functions.command(me.STEAMCMD)
+               cmd.do(inp.STEAMCMD)
             case "2":
-               menu_functions.command(me.DHEWM3)
-               menu_functions.command(['dhewm3'])
+               cmd.do(inp.DHEWM3INSTLL)
+               cmd.do(inp.GETDOOM3DEMO)
+               cmd.do(inp.EXTRDOOM3PAKS)
+               cmd.do(inp.MKDIRDHEWM3)
+               cmd.do(inp.CPDOOM3DEMODAT)
             case "3":
-               menu_functions.command(me.QUAKESPASM)
+               cmd.do(inp.QUAKESPASMINSTLL)
             case "4":
-               menu_functions.command(me.DSDADOOM)
+               cmd.do(inp.DSDADOOM)
             case "5":
-               menu_functions.command(me.DUNELEGACY)
+               cmd.do(inp.DUNELEGACY)
             case "6":
-               menu_functions.command(me.FHEROES2)
+               cmd.do(inp.FHEROES2)
             case "7":
-               menu_functions.command(me.OPENTYRIAN)
+               cmd.do(inp.OPENTYRIAN)
             case "8":
-               menu_functions.command(me.XRICK)
+               cmd.do(inp.XRICK)
             case "9":
-               menu_functions.command(me.OPENXCOM)
+               cmd.do(inp.OPENXCOM)
             case "10":
-               menu_functions.command(me.SCUMMVM)
+               cmd.do(inp.SCUMMVM)
             case "11":
-               menu_functions.command(me.REMINISCENCE)
+               cmd.do(inp.REMINISCENCE)
             case _:
-               menu_functions.cls()
+               cmd.cls()
 
 
-def game_dat_sub_menu():
+def games_dat_sub_menu():
 
     while True:
         
         title()
 
-        draw_game_dat_sub_menu()
+        draw_games_dat_sub_menu()
 
         whatdo = input("Select option: ")
 
@@ -85,7 +88,9 @@ def game_dat_sub_menu():
             case "0":
                 exit()
             case "1":
-               menu_functions.command(me.GETDOOM3DEMO)
+                cmd.do(inp.GETDOOM3DEMO)
+                cmd.do(inp.EXTRDOOM3PAKS)
+                cmd.do(inp.MVDOOM3DEMODAT)
 
 def title():
     print("======== GEM installer ========")
@@ -93,9 +98,9 @@ def title():
 def draw_main_menu():
     menu = """
     0) Exit
-    1) Go to install sub menu
-    2) Go to download game data sub menu
-    3) Go to run game sub menu
+    1) Go to install games sub menu
+    2) Go to download games data sub menu
+    3) Go to run games sub menu
     """
     print(menu)
 
@@ -114,13 +119,13 @@ def draw_inst_sub_menu():
     8) install xrick - Rick Dangerous linux port
     9) install openxcom
        UFO: Enemy Unknown / X-COM: UFO Defense linux port
-    10) install scummvm - rpg games runer
+    10) install scummvm - rpg gainps runer
     11) install REminiscence - Flashback linux port
     """
     print(menu)
 
     
-def draw_game_dat_sub_menu():
+def draw_games_dat_sub_menu():
     menu = """
     B) Back to main menu
     0) Exit
