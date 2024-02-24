@@ -12,27 +12,27 @@ def main_menu():
             case "0":
                 exit()
             case "1":
-               menu_functions.suse_install(me.STEAMCMD)
+               menu_functions.install(me.STEAMCMD)
             case "2":
-               menu_functions.suse_install(me.DHEWM3)
+               menu_functions.install(me.DHEWM3)
             case "3":
-               menu_functions.suse_install(me.QUAKESPASM)
+               menu_functions.install(me.QUAKESPASM)
             case "4":
-               menu_functions.suse_install(me.DSDADOOM)
+               menu_functions.install(me.DSDADOOM)
             case "5":
-               menu_functions.suse_install(me.DUNELEGACY)
+               menu_functions.install(me.DUNELEGACY)
             case "6":  
-               menu_functions.suse_install(me.FHEROES2)
+               menu_functions.install(me.FHEROES2)
             case "7":
-               menu_functions.suse_install(me.OPENTYRIAN)
+               menu_functions.install(me.OPENTYRIAN)
             case "8":
-               menu_functions.suse_install(me.XRICK)
+               menu_functions.install(me.XRICK)
             case "9":
-               menu_functions.suse_install(me.OPENXCOM)
+               menu_functions.install(me.OPENXCOM)
             case "10":
-               menu_functions.suse_install(me.SCUMMVM)
+               menu_functions.install(me.SCUMMVM)
             case "11":
-               menu_functions.suse_install(me.REMINISCENCE)
+               menu_functions.install(me.REMINISCENCE)
             case _:
                menu_functions.cls()    
 
