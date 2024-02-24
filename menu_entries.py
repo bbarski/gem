@@ -1,5 +1,17 @@
-COMMAND=['sudo','zypper','--non-interactive','install','--auto-agree-with-licenses']
+COMMAND=['sudo',
+         'zypper',
+         '--non-interactive',
+         'install',
+         '--auto-agree-with-licenses'
+        ]
 STEAMCMD=[*COMMAND,'steamcmd']
 DHEWM3=[*COMMAND,'dhewm3']
 QUAKESPASM=[*COMMAND,'quakespasm']
 DSDADOOM=[*COMMAND,'dsda-doom']
+DUNELEGACY=[*COMMAND,'dunelegacy']
+FHEROES2=[*COMMAND,'fheroes2']
+OPENTYRIAN=[*COMMAND,'opentyrian']
+XRICK=[*COMMAND,'xrick']
+OPENXCOM=[*COMMAND,'openxcom']
+SCUMMVM=[*COMMAND,'scummvm']
+REMINISCENCE=[*COMMAND,'reminiscence']

@@ -9,12 +9,3 @@ def suse_install(command) :
     p = subprocess.Popen(command)
     p.wait()
     
-def mint_install(pkgName) :
-    command = ['sudo',
-               'apt-get',
-               '-yq',
-               'install',
-               pkgName]
-    
-    p = subprocess.Popen(command)
-    p.wait()
