@@ -1,0 +1,5 @@
+COMMAND=['sudo','zypper','--non-interactive','install','--auto-agree-with-licenses']
+STEAMCMD=[*COMMAND,'steamcmd']
+DHEWM3=[*COMMAND,'dhewm3']
+QUAKESPASM=[*COMMAND,'quakespasm']
+DSDADOOM=[*COMMAND,'dsda-doom']

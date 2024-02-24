@@ -1,4 +1,5 @@
 import menu_functions
+import menu_entries
 
 def main_menu():
     while True:
@@ -10,29 +11,29 @@ def main_menu():
         match whatdo:
             case "0":
                 exit()
-           case "1":
-               menu_functions.suse_install('steamcmd')
-           case "2":
-               menu_functions.suse_install('dhewm3')
-           case "3":
-               menu_functions.suse_install('quakespasm')
-           case "4":
-               menu_functions.suse_install('dsda-doom')
-           case "5":
+            case "1":
+               menu_functions.suse_install(menu_entries.STEAMCMD)
+            case "2":
+               menu_functions.suse_install(menu_entries.DHEWM3)
+            case "3":
+               menu_functions.suse_install(menu_entries.QUAKESPASM)
+            case "4":
+               menu_functions.suse_install(menu_entries.DSDADOOM)
+            case "5":
                menu_functions.suse_install('dunelegacy')
-           case "6":  
+            case "6":  
                menu_functions.suse_install('fheroes2')
-           case "7":
+            case "7":
                menu_functions.suse_install('opentyrian')
-           case "8":
+            case "8":
                menu_functions.suse_install('xrick')
-           case "9":
+            case "9":
                menu_functions.suse_install('openxcom')
-           case "10":
+            case "10":
                menu_functions.suse_install('scummvm')
-           case "11":
+            case "11":
                menu_functions.suse_install('reminiscence')
-           case _:
+            case _:
                menu_functions.cls()    
 
 def draw_menu():
