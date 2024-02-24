@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import menu
+
 def main():
 
     menu.main_menu()
