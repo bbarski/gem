@@ -17,9 +17,9 @@ def main_menu():
             case "1":
                install_sub_menu()
             case "2":
-               menu_functions.command(me.DHEWM3)
+               game_dat_sub_menu()
             case "3":
-               menu_functions.command(me.QUAKESPASM)
+               print("not implemented")
             case _:
                menu_functions.cls()
 
@@ -34,6 +34,10 @@ def install_sub_menu():
         whatdo = input("Select option: ")
 
         match whatdo:
+            case "A":
+               menu_functions.command(me.ADD_SUSETW_GAMES_REP)
+               menu_functions.command(me.ADD_SUSETW_GAMES_TOOLS_REP)
+               menu_functions.command(me.AAGPGKEYS)
             case "B":
                main_menu() 
             case "0":
@@ -42,6 +46,7 @@ def install_sub_menu():
                menu_functions.command(me.STEAMCMD)
             case "2":
                menu_functions.command(me.DHEWM3)
+               menu_functions.command(['dhewm3'])
             case "3":
                menu_functions.command(me.QUAKESPASM)
             case "4":
@@ -49,7 +54,6 @@ def install_sub_menu():
             case "5":
                menu_functions.command(me.DUNELEGACY)
             case "6":
-               menu_functions.command(me.ADD_FHEROES2_REP) 
                menu_functions.command(me.FHEROES2)
             case "7":
                menu_functions.command(me.OPENTYRIAN)
@@ -63,6 +67,25 @@ def install_sub_menu():
                menu_functions.command(me.REMINISCENCE)
             case _:
                menu_functions.cls()
+
+
+def game_dat_sub_menu():
+
+    while True:
+        
+        title()
+
+        draw_game_dat_sub_menu()
+
+        whatdo = input("Select option: ")
+
+        match whatdo:
+            case "B":
+               main_menu() 
+            case "0":
+                exit()
+            case "1":
+               menu_functions.command(me.GETDOOM3DEMO)
 
 def title():
     print("======== GEM installer ========")
@@ -78,6 +101,7 @@ def draw_main_menu():
 
 def draw_inst_sub_menu():
     menu = """
+    A) Add SUSE TW games repos
     B) Back to main menu
     0) Exit
     1) install steamcmd - linux steam data downloader
@@ -94,3 +118,13 @@ def draw_inst_sub_menu():
     11) install REminiscence - Flashback linux port
     """
     print(menu)
+
+    
+def draw_game_dat_sub_menu():
+    menu = """
+    B) Back to main menu
+    0) Exit
+    1) get Doom 3 demo game data
+    """
+    print(menu)
+

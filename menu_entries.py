@@ -17,6 +17,15 @@ SCUMMVM=[*INST_COMMAND,'scummvm']
 REMINISCENCE=[*INST_COMMAND,'reminiscence']
 #
 ADD_REP_COMMAND=['sudo','zypper','ar']
-ADD_FHEROES2_REP=[*ADD_REP_COMMAND,
-                  'https://download.opensuse.org/repositories/games/openSUSE_Tumbleweed/',
-                  'games-openSUSE_Tumbleweed']
+ADD_SUSETW_GAMES_REP=[*ADD_REP_COMMAND,
+'https://download.opensuse.org/repositories/games/openSUSE_Tumbleweed/',
+'games-openSUSE_Tumbleweed']
+ADD_SUSETW_GAMES_TOOLS_REP=[*ADD_REP_COMMAND,
+'https://download.opensuse.org/repositories/games:/tools/openSUSE_Tumbleweed/','games-tools-openSUSE_Tumbleweed']
+AAGPGKEYS=['sudo','zypper','--gpg-auto-import-keys','ref']
+#
+DOWNDIR='/tmp/'
+CURL_COMMAND=['curl','-o']
+DOOM3DEMOURL='https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run'
+DOOM3DEMODOWNPATH='/tmp/doom3-linux-1.1.1286-demo.x86.run'
+GETDOOM3DEMO=[*CURL_COMMAND,DOOM3DEMODOWNPATH,DOOM3DEMOURL]
