@@ -1,17 +1,22 @@
-COMMAND=['sudo',
+INST_COMMAND=['sudo',
          'zypper',
          '--non-interactive',
          'install',
          '--auto-agree-with-licenses'
         ]
-STEAMCMD=[*COMMAND,'steamcmd']
-DHEWM3=[*COMMAND,'dhewm3']
-QUAKESPASM=[*COMMAND,'quakespasm']
-DSDADOOM=[*COMMAND,'dsda-doom']
-DUNELEGACY=[*COMMAND,'dunelegacy']
-FHEROES2=[*COMMAND,'fheroes2']
-OPENTYRIAN=[*COMMAND,'opentyrian']
-XRICK=[*COMMAND,'xrick']
-OPENXCOM=[*COMMAND,'openxcom']
-SCUMMVM=[*COMMAND,'scummvm']
-REMINISCENCE=[*COMMAND,'reminiscence']
+STEAMCMD=[*INST_COMMAND,'steamcmd']
+DHEWM3=[*INST_COMMAND,'dhewm3']
+QUAKESPASM=[*INST_COMMAND,'quakespasm']
+DSDADOOM=[*INST_COMMAND,'dsda-doom']
+DUNELEGACY=[*INST_COMMAND,'dunelegacy']
+FHEROES2=[*INST_COMMAND,'fheroes2']
+OPENTYRIAN=[*INST_COMMAND,'opentyrian']
+XRICK=[*INST_COMMAND,'xrick']
+OPENXCOM=[*INST_COMMAND,'openxcom']
+SCUMMVM=[*INST_COMMAND,'scummvm']
+REMINISCENCE=[*INST_COMMAND,'reminiscence']
+#
+ADD_REP_COMMAND=['sudo','zypper','ar']
+ADD_FHEROES2_REP=[*ADD_REP_COMMAND,
+                  'https://download.opensuse.org/repositories/games/openSUSE_Tumbleweed/',
+                  'games-openSUSE_Tumbleweed']

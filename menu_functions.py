@@ -4,7 +4,7 @@ import subprocess
 def cls():
     print("\033[H\033[J", end="")
 
-def install(command) :
+def command(command) :
     
     p = subprocess.Popen(command)
     p.wait()
