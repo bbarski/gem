@@ -43,7 +43,7 @@ def install_sub_menu():
             case "0":
                 exit()
             case "1":
-               cmd.do(inp.STEAMCMD)
+               cmd.do(inp.STEAMCMDINSTLL)
             case "2":
                cmd.do(inp.DHEWM3INSTLL)
                cmd.do(inp.GETDOOM3DEMO)
