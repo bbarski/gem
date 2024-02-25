@@ -1,0 +1,44 @@
+class App:
+    def __init__(self,name,urls,ports,instl_cmds):
+        self.name = name
+        self.urls = urls
+        self.ports = ports
+        self.instl_cmds = instl_cmds
+
+    def __str__(self):
+        return f"{self.name} {self.urls} {self.ports} {self.instl_cmds}"
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self,name):
+        self._name = name
+    
+    @property 
+    def urls(self):
+        return self._urls
+    
+    @urls.setter
+    def urls(self,urls):
+        self._urls=urls
+
+        
+    @property 
+    def ports(self):
+        return self._ports
+    
+    @ports.setter
+    def ports(self,ports):
+        self._ports=ports
+
+
+    @property 
+    def instl_cmds(self):
+        return self._instl_cmds
+    
+    @instl_cmds.setter
+    def instl_cmds(self,instl_cmds:
+        self._instl_cmds=instl_cmds
+

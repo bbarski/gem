@@ -30,7 +30,7 @@ ACCPT_REP_GPGKEYS=['sudo','zypper','--gpg-auto-import-keys','ref']
 DOWNDIR='/tmp/'
 CURL_COMMAND=['curl','-o']
 DOOM3DEMOURL=urls.DOOM3DEMMRR3
-DOOM3DEMODOWNPATH=DOWNDIR+helpers.get_file_name_from_url(urls.DOOM3DEMMRR3)
+DOOM3DEMODOWNPATH=DOWNDIR+helpers.get_fname_from_url(urls.DOOM3DEMMRR3)
 GETDOOM3DEMO=[*CURL_COMMAND,DOOM3DEMODOWNPATH,DOOM3DEMOURL]
 #
 EXTRDOOM3PAKS=['sh',DOOM3DEMODOWNPATH,'--tar','xvf','-C',DOWNDIR,'demo/']

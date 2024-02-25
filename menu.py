@@ -1,9 +1,15 @@
 import cmd
 import inputs as inp
+from apps import Apps as apps
+
+with open('apps.json') as appsjson:
+    apps=apps(appsjson)
 
 def main_menu():
 
     while True:
+        
+        print(apps.app)
 
         title()
     
@@ -45,7 +51,7 @@ def install_sub_menu():
             case "1":
                cmd.do(inp.STEAMCMDINSTLL)
             case "2":
-               cmd.do(inp.DHEWM3INSTLL)
+               cmd.do(apps.instl_cmds)
                cmd.do(inp.GETDOOM3DEMO)
                cmd.do(inp.EXTRDOOM3PAKS)
                cmd.do(inp.MKDIRDHEWM3)
