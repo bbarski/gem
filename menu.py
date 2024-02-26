@@ -9,8 +9,8 @@ def main_menu():
 
     while True:
         for i in range(len(apps.app)):
-            print("i ",i)
-            print("apps.app[i] ",apps.app[i])
+            print(apps.app[i]['name'])
+            print("App # ",i)
 
         title()
     

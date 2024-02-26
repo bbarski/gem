@@ -1,2 +1,2 @@
-{"app":[{"down_dir":"/tmp/","name":"Steamcmd", "urls":"https://cdn.akamai.steamstatic.com/client/installer/steam.deb", "ports":"","instl_cmds":["sudo","zypper","-n","in","-l","steamcmd"],"down_cmd":["curl","-o"],"id":"1"},
+{"app":[{"down_dir":"/tmp/","name":"Lgogdownloader", "urls":"https://github.com/Sude-/lgogdownloader", "ports":"lgogdownloader","instl_cmds":["sudo","zypper","-n","in","-l","lgogdownloader"],"down_cmd":["curl","-o"],"id":"1"},
 {"down_dir":"/tmp/","name":"Doom3", "urls":"https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run", "ports":"dhewm3","instl_cmds":["sudo","zypper","-n","in","-l","dhewm3"],"down_cmd":["curl","-o"],"id":"2"}]}
