@@ -8,8 +8,9 @@ with open('apps.json') as appsjson:
 def main_menu():
 
     while True:
-        
-        print(apps.app)
+        for i in range(len(apps.app)):
+            print("i ",i)
+            print("apps.app[i] ",apps.app[i])
 
         title()
     
