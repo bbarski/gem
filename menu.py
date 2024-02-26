@@ -9,8 +9,7 @@ def main_menu():
 
     while True:
         for i in range(len(apps.app)):
-            print(apps.app[i]['name'])
-            print("App # ",i)
+            print("App #",i,"=>",apps.app[i]['name'])
 
         title()
     
@@ -47,33 +46,33 @@ def install_sub_menu():
                cmd.do(inp.ACCPT_REP_GPGKEYS)
             case "B":
                main_menu() 
-            case "0":
+            case "E":
                 exit()
+            case "0":
+               cmd.do(apps.app[0]['instl_cmds'])
             case "1":
-               cmd.do(inp.STEAMCMDINSTLL)
-            case "2":
                cmd.do(apps.instl_cmds)
                cmd.do(inp.GETDOOM3DEMO)
                cmd.do(inp.EXTRDOOM3PAKS)
                cmd.do(inp.MKDIRDHEWM3)
                cmd.do(inp.CPDOOM3DEMODAT)
-            case "3":
+            case "2":
                cmd.do(inp.QUAKESPASMINSTLL)
-            case "4":
+            case "3":
                cmd.do(inp.DSDADOOM)
-            case "5":
+            case "4":
                cmd.do(inp.DUNELEGACY)
-            case "6":
+            case "5":
                cmd.do(inp.FHEROES2)
-            case "7":
+            case "6":
                cmd.do(inp.OPENTYRIAN)
-            case "8":
+            case "7":
                cmd.do(inp.XRICK)
-            case "9":
+            case "8":
                cmd.do(inp.OPENXCOM)
-            case "10":
+            case "9":
                cmd.do(inp.SCUMMVM)
-            case "11":
+            case "10":
                cmd.do(inp.REMINISCENCE)
             case _:
                cmd.cls()
@@ -115,19 +114,19 @@ def draw_inst_sub_menu():
     menu = """
     A) Add SUSE TW games repos
     B) Back to main menu
-    0) Exit
-    1) install steamcmd - linux steam data downloader
-    2) install dhewm3 - doom3 linux port
-    3) install quakespasm - quake1 linux port
-    4) install dsda-doom - DOOM 1 linux port
-    5) install dunelegacy - DUNE 2 linux port
-    6) install fheroes2 - HOMM2 linux port
-    7) install opentyrian - Tyrian 2000 linux port
-    8) install xrick - Rick Dangerous linux port
-    9) install openxcom
+    E) Exit
+    0) install lgogdownloader - linux gog data downloader
+    1) install dhewm3 - doom3 linux port
+    2) install quakespasm - quake1 linux port
+    3) install dsda-doom - DOOM 1 linux port
+    4) install dunelegacy - DUNE 2 linux port
+    5) install fheroes2 - HOMM2 linux port
+    6) install opentyrian - Tyrian 2000 linux port
+    7) install xrick - Rick Dangerous linux port
+    8) install openxcom
        UFO: Enemy Unknown / X-COM: UFO Defense linux port
-    10) install scummvm - rpg gainps runer
-    11) install REminiscence - Flashback linux port
+    9) install scummvm - rpg gainps runer
+    10) install REminiscence - Flashback linux port
     """
     print(menu)
 
