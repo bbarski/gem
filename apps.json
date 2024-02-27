@@ -1,8 +1,77 @@
-{"app":[
-	{"down_dir":"/tmp/","name":"Lgogdownloader", "urls":"https://github.com/Sude-/lgogdownloader", "ports":"lgogdownloader","instl_cmds":["sudo","zypper","-n","in","-l","lgogdownloader"],"down_cmd":["curl","-o"],"id":"1"},
-	
-	{"down_dir":"/tmp/","name":"Doom3", "urls":"https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run", "ports":"dhewm3","instl_cmds":["sudo","zypper","-n","in","-l","dhewm3"],"down_cmd":["curl","-o"],"id":"2"},
-	
-	{"down_dir":"/tmp/","name":"FileZilla", "urls":"https://filezilla-project.org/download.php", "ports":"filezilla","instl_cmds":["sudo","zypper","-n","in","-l","filezilla"],"down_cmd":["curl","-o"],"id":"2"}
-
-]}
+{
+  "down_dir": "/tmp/",
+  "apps": [
+    {
+      "name": "Lgogdownloader",
+      "urls": "https://github.com/Sude-/lgogdownloader",
+      "dscrp": "GOG.com downloader",
+      "instl_cmds": [
+        "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "lgogdownloader"
+      ],
+      "down_cmd": [
+        "curl",
+        "-o"
+      ],
+      "id": "1"
+    },
+    {
+      "name": "Dhewm3",
+      "urls": "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run",
+      "dscrp": "Doom3 linux port",
+      "instl_cmds": [
+        "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "dhewm3"
+      ],
+      "down_cmd": [
+        "curl",
+        "-o"
+      ],
+      "id": "2"
+    },
+    {
+      "name": "UFO: Alien Invasion",
+      "urls": "https://ufoai.org/wiki/Download",
+      "dscrp": "X-COM like game",
+      "instl_cmds": [
+        "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "ufoai"
+      ],
+      "down_cmd": [
+        "curl",
+        "-o"
+      ],
+      "id": "2"
+    },
+    {
+      "name": "FileZilla",
+      "urls": "https://filezilla-project.org/download.php",
+      "dscrp": "filezilla",
+      "instl_cmds": [
+        "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "filezilla"
+      ],
+      "down_cmd": [
+        "curl",
+        "-o"
+      ],
+      "id": "2"
+    }
+  ]
+}

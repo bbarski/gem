@@ -1,6 +1,6 @@
 import json
 
-class Apps(object):
+
+class Db(object):
     def __init__(self, j):
         self.__dict__ = json.load(j)
-
