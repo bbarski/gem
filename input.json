@@ -1,11 +1,11 @@
 {
-  "down_dir": "/tmp/",
-  "apps": [
+  "wdir": "/tmp/",
+  "posn": [
     {
       "name": "Lgogdownloader",
       "urls": "https://github.com/Sude-/lgogdownloader",
       "dscrp": "GOG.com downloader",
-      "instl_cmds": [
+      "cmd": [
         "sudo",
         "zypper",
         "-n",
@@ -13,35 +13,30 @@
         "-l",
         "lgogdownloader"
       ],
-      "down_cmd": [
-        "curl",
-        "-o"
-      ],
+      "cmd_desc": "install",
       "id": "1"
     },
     {
       "name": "Dhewm3",
       "urls": "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run",
       "dscrp": "Doom3 linux port",
-      "instl_cmds": [
+      "cmd": [
         "sudo",
         "zypper",
         "-n",
         "in",
         "-l",
-        "dhewm3"
+        "dhewm3",
+        "curl "
       ],
-      "down_cmd": [
-        "curl",
-        "-o"
-      ],
+      "cmd_desc": "install",
       "id": "2"
     },
     {
       "name": "UFO: Alien Invasion",
       "urls": "https://ufoai.org/wiki/Download",
       "dscrp": "X-COM like game",
-      "instl_cmds": [
+      "cmd": [
         "sudo",
         "zypper",
         "-n",
@@ -49,29 +44,16 @@
         "-l",
         "ufoai"
       ],
-      "down_cmd": [
-        "curl",
-        "-o"
-      ],
-      "id": "2"
+      "cmd_desc": "install",
+      "id": "3"
     },
     {
-      "name": "FileZilla",
-      "urls": "https://filezilla-project.org/download.php",
-      "dscrp": "filezilla",
-      "instl_cmds": [
-        "sudo",
-        "zypper",
-        "-n",
-        "in",
-        "-l",
-        "filezilla"
-      ],
-      "down_cmd": [
-        "curl",
-        "-o"
-      ],
-      "id": "2"
+      "name": "Exit",
+      "urls": "",
+      "dscrp": "Exit",
+      "cmd": ["exit"],
+      "cmd_desc":"Exit",
+      "id": "4"
     }
   ]
 }

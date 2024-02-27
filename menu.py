@@ -1,53 +1,25 @@
-import cmd
-import inputs as inp
-from db import Db as db
+import proc
+from dct import dct
 
 MENU_INPUT_STRING = 'Select option: '
 NOT_IMPL = 'not implemented'
-MSG = '======== GEM installer ========'
+MSG = '======== GEM  ========'
 
-with open('apps.json') as apps_json:
-    db = db(apps_json)
+with (open('input.json') as input_json):
+    dct = dct(input_json)
 
 
 def main_menu():
-    while True:
-        print(MSG)
-        draw_main_menu()
-        what_do = input(MENU_INPUT_STRING)
-        match what_do:
-            case "0":
-                exit()
-            case "1":
-                install_sub_menu()
-            case "3":
-                print(NOT_IMPL)
-            case _:
-                cmd.cls()
-
-
-def install_sub_menu():
-    for i in range(len(db.apps)):
+    for i in range(len(dct.posn)):
         while True:
             print(MSG)
-            inst_sub_menu_label()
+            main_menu_label()
             what_do = int(input(MENU_INPUT_STRING))
             match what_do:
                 case i:
-                    cmd.do(db.apps[i]["instl_cmds"])
+                    proc.exe(dct.posn[i]["cmd"])
 
 
-def inst_sub_menu_label():
-    for i in range(len(db.apps)):
-        print(i, ")", "install ", db.apps[i]["name"])
-
-
-def draw_main_menu():
-    menu = """
-    0) Exit
-    1) Go to install games sub menu
-    2) Go to download games data sub menu
-    3) Go to run games sub menu
-    """
-    print(menu)
-
+def main_menu_label():
+    for i in range(len(dct.posn)):
+        print(i, dct.posn[i]["cmd_desc"], dct.posn[i]["name"])

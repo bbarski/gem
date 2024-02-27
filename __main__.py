@@ -2,7 +2,6 @@
 
 import menu
 
-1
 def main():
     menu.main_menu()
 
