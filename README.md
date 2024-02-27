@@ -1,1 +1,1 @@
-GEM
+GEM - Glossary with Executable Modules
