@@ -7,5 +7,5 @@ def cls():
 
 
 def exe(command):
-    p = subprocess.Popen(command,shell=True)
+    p = subprocess.Popen(command)
     p.wait()

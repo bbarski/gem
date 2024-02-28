@@ -6,12 +6,13 @@
       "urls": "https://github.com/Sude-/lgogdownloader",
       "dscrp": "GOG.com downloader",
       "cmd": [
-        "sudo",
+        ["sudo",
         "zypper",
         "-n",
         "in",
         "-l",
         "lgogdownloader"
+          ]
       ],
       "cmd_desc": "install",
       "id": "1"
@@ -21,16 +22,17 @@
       "urls": "",
       "dscrp": "Doom3 linux port",
       "cmd": [
-        "sudo",
+        ["sudo",
         "zypper",
         "-n",
         "in",
         "-l",
-        "dhewm3",
-        "&&",
-        "curl",
+          "dhewm3"
+        ],
+        ["curl",
         "-O",
-        "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run"
+        "https://i.stack.imgur.com/TLqfV.png"
+        ]
       ],
       "cmd_desc": "install",
       "id": "2"
