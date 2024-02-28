@@ -20,7 +20,7 @@
     {
       "name": "Dhewm3",
       "urls": "",
-      "dscrp": "Doom3 linux port",
+      "dscrp": "Doom3 demo on linux port",
       "cmd": [
         ["sudo",
         "zypper",
@@ -30,8 +30,9 @@
           "dhewm3"
         ],
         ["curl",
-        "-O",
-        "https://i.stack.imgur.com/TLqfV.png"
+        "-o",
+          "/tmp/doom3-linux-1.1.1286-demo.x86.run",
+        "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run"
         ]
       ],
       "cmd_desc": "install",
