@@ -19,8 +19,8 @@
     },
     {
       "name": "Dhewm3",
-      "urls": "",
-      "dscrp": "Doom3 demo on linux port",
+      "urls": "https://dhewm3.org/",
+      "dscrp": "Doom3 demo on Dhewm3 linux port",
       "cmd": [
         ["sudo",
         "zypper",
@@ -54,11 +54,18 @@
       "id": "3"
     },
     {
-      "name": "Exit",
-      "urls": "",
-      "dscrp": "Exit",
-      "cmd": ["exit"],
-      "cmd_desc":"Exit",
+      "name": "dunelegacy",
+      "urls": "https://dunelegacy.sourceforge.net/website/",
+      "dscrp": "Dune 2 on dunelegacy linux port",
+      "cmd": [
+        "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "dunelegacy"
+      ],
+      "cmd_desc":"install",
       "id": "4"
     }
   ]
