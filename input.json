@@ -18,7 +18,7 @@
     },
     {
       "name": "Dhewm3",
-      "urls": "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run",
+      "urls": "",
       "dscrp": "Doom3 linux port",
       "cmd": [
         "sudo",
@@ -27,7 +27,10 @@
         "in",
         "-l",
         "dhewm3",
-        "curl "
+        "&&",
+        "curl",
+        "-O",
+        "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run"
       ],
       "cmd_desc": "install",
       "id": "2"
