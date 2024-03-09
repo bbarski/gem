@@ -1,5 +1,5 @@
 {
-  "wdir": "/tmp/",
+  "json_name":"==My Fav Gms==",
   "posn": [
     {
       "name": "Lgogdownloader",
@@ -20,7 +20,7 @@
     {
       "name": "Dhewm3",
       "urls": "https://dhewm3.org/",
-      "dscrp": "Doom3 demo on Dhewm3 linux port",
+      "dscrp": "Doom 3 demo on Dhewm3",
       "cmd": [
         ["sudo",
         "zypper",
@@ -29,11 +29,19 @@
         "-l",
           "dhewm3"
         ],
+
+        ["sh","/tmp/doom3-linux-1.1.1286-demo.x86.run","--tar","xvf","demo/"],
+        ["sudo","mkdir","/usr/share/dhewm3"],
+        ["sudo","mv","demo/","/usr/share/dhewm3"],
         ["curl",
-        "-o",
-          "/tmp/doom3-linux-1.1.1286-demo.x86.run",
-        "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run"
-        ]
+        "-LJo",
+          "/tmp/Doom3Demo.png",
+          "https://raw.githubusercontent.com/techcoder20/RPIDoom3Installer/main/Doom3Demo.png"
+        ],
+        ["mkdir","/home/bart/.local/share/icons/hicolor/512x512"],
+        ["mkdir","/home/bart/.local/share/icons/hicolor/512x512/apps"],
+        ["mkdir","/home/bart/.local/share/icons/hicolor/512x512/apps/dhewm3"],
+        ["mv","/tmp/Doom3Demo.png","/home/bart/.local/share/icons/hicolor/512x512/apps/dhewm3"]
       ],
       "cmd_desc": "install",
       "id": "2"
@@ -58,12 +66,19 @@
       "urls": "https://dunelegacy.sourceforge.net/website/",
       "dscrp": "Dune 2 on dunelegacy linux port",
       "cmd": [
-        "sudo",
+        ["sudo",
         "zypper",
         "-n",
         "in",
         "-l",
         "dunelegacy"
+        ],
+        ["curl",
+          "-OJ",
+        "https://ia802604.us.archive.org/34/items/DUNE2_201507/ATRE.PAK",
+          "-o",
+          "~/.config/dunelegacy/data/ATRE.PAK"
+        ]
       ],
       "cmd_desc":"install",
       "id": "4"

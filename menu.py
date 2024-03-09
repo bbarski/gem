@@ -1,16 +1,14 @@
 import proc
-from dct import dct
+from jdct import jdct
 
 MENU_INPUT_STRING = 'Select option: '
-NOT_IMPL = 'not implemented'
-MSG = '======== GEM  ========'
 
-with (open('input.json') as input_json):
-    dct = dct(input_json)
+with (open('input.json') as json_strm):
+    jdct = jdct(json_strm)
 
 
 def main_menu():
-    for i in range(len(dct.posn)):
+    for i in range(len(jdct.posn)):
         while True:
             main_menu_label()
             try:
@@ -20,11 +18,11 @@ def main_menu():
             else:
                 match what_do:
                     case i:
-                        for j in range(len(dct.posn[i]["cmd"])):
-                            proc.exe(dct.posn[i]["cmd"][j])
+                        for j in range(len(jdct.posn[i]["cmd"])):
+                            proc.exe(jdct.posn[i]["cmd"][j])
 
 
 def main_menu_label():
-    print(MSG)
-    for i in range(len(dct.posn)):
-        print(i, dct.posn[i]["cmd_desc"], dct.posn[i]["name"])
+    print(jdct.json_name)
+    for i in range(len(jdct.posn)):
+        print(i, jdct.posn[i]["cmd_desc"], jdct.posn[i]["dscrp"])
