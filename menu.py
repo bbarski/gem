@@ -1,9 +1,11 @@
 import proc
 from jdct import jdct
 
-MENU_INPUT_STRING = 'Select option: '
+MENU_INPT_STR = 'Select option: '
+FNAME_INPT_STR = 'Enter json name: '
 
-with (open('input.json') as json_strm):
+fname = input(FNAME_INPT_STR)
+with (open(fname) as json_strm):
     jdct = jdct(json_strm)
 
 
@@ -12,7 +14,7 @@ def main_menu():
         while True:
             main_menu_label()
             try:
-                what_do = int(input(MENU_INPUT_STRING))
+                what_do = int(input(MENU_INPT_STR))
             except ValueError:
                 proc.cls()
             else:

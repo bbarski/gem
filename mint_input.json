@@ -1,0 +1,75 @@
+{
+  "json_name":"==My Fav Gms - Mint==",
+  "posn": [
+    {
+      "name": "Lgogdownloader",
+      "urls": "https://github.com/Sude-/lgogdownloader",
+      "dscrp": "GOG.com downloader",
+      "cmd": [
+        ["sudo",
+          "-S",
+        "apt-get",
+        "install",
+        "-y",
+        "lgogdownloader"
+          ]
+      ],
+      "cmd_desc": "install",
+      "id": "1"
+    },
+    {
+      "name": "uHexen2",
+      "urls": "https://uhexen2.sourceforge.net/",
+      "dscrp": "HEXEN 2 demo on uHexen2",
+      "cmd": [
+        ["sudo",
+        "-S",
+        "apt-get",
+        "install",
+        "-y",
+          "uhexen2"
+        ],
+         ["curl",
+        "-LJo",
+          "/tmp/hexen2demo_nov1997-linux-x86_64.tgz",
+        "https://master.dl.sourceforge.net/project/uhexen2/Hexen2Demo-Nov.1997/hexen2demo_nov1997-linux-x86_64.tgz"
+        ],
+        ["tar","-zxvf","/tmp/hexen2demo_nov1997-linux-x86_64.tgz","-C","/tmp"],
+        ["sudo","cp","-r","/tmp/hexen2demo_nov1997","/opt"]
+      ],
+      "cmd_desc": "install",
+      "id": "2"
+    },
+    {
+      "name": "Dhewm3",
+      "urls": "https://dhewm3.org/",
+      "dscrp": "Doom 3 demo on Dhewm3",
+      "cmd": [
+        ["sudo",
+        "-S",
+        "apt-get",
+        "install",
+        "-y",
+          "dhewm3"
+        ],
+        ["sudo",
+        "-S",
+        "apt-get",
+        "install",
+        "-y",
+          "dhewm3-doom3"
+        ],
+         ["curl",
+        "-o",
+          "/tmp/doom3-linux-1.1.1286-demo.x86.run",
+        "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run"
+        ],
+        ["sh","/tmp/doom3-linux-1.1.1286-demo.x86.run","--tar","xvf","demo/"],
+        ["sudo","mkdir","/usr/share/games/doom3"],
+        ["sudo","mv","demo/","/usr/share/games/doom3"]
+      ],
+      "cmd_desc": "install",
+      "id": "3"
+    }
+  ]
+}
