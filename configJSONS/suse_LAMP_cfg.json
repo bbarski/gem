@@ -1,0 +1,78 @@
+{
+  "json_name":"==LAMP On OpenSuse==",
+  "posn": [
+    {
+      "name": "Apache 2",
+      "urls": "",
+      "dscrp": "Apache 2 HTTP server",
+      "cmd": [
+        ["sudo",
+          "-S",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "apache2"
+        ]
+      ],
+      "cmd_desc": "install",
+      "id": "0"
+    },
+    {
+      "name": "MariaDB",
+      "urls": "",
+      "dscrp": "MariaDB SQL server",
+      "cmd": [
+        ["sudo",
+          "-S",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "mariadb"
+        ]      ],
+      "cmd_desc": "install",
+      "id": "1"
+    },
+    {
+      "name": "mysql_secure_installation",
+      "urls": "",
+      "dscrp": "mysql_secure_installation",
+      "cmd": [
+        [
+        "mysql_secure_installation"
+        ]      ],
+      "cmd_desc": "run",
+      "id": "2"
+    },
+    {
+      "name": "PHP8",
+      "urls": "",
+      "dscrp": "PHP8 scripting language",
+      "cmd": [
+        ["sudo",
+          "-S",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "php8"
+        ]      ],
+      "cmd_desc": "install",
+      "id": "3"
+    },
+       {
+      "name": "Latest Wordpress polish",
+      "urls": "",
+      "dscrp": "Download latest Wordpress CMS system Polish Localisation to /tmp",
+      "cmd": [
+          ["curl",
+            "-LJo",
+            "/tmp/wordPress-latest-pl_PL.zip",
+          "https://pl.wordpress.org/latest-pl_PL.zip"
+        ]     ],
+      "cmd_desc": "install",
+      "id": "4"
+    }
+  ]
+}

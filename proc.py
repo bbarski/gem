@@ -7,5 +7,10 @@ def cls():
 
 
 def exe(command):
-    p = subprocess.Popen(command)
-    p.wait()
+    p = subprocess.call(command)
+
+    if p == 0:
+        print(command ," return ", p)
+    else:
+        print(command, " return ", p)
+        exit(p)

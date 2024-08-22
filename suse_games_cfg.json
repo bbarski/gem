@@ -1,0 +1,162 @@
+{
+  "json_name":"==My Fav Gms - OpenSuse==",
+  "posn": [
+    {
+      "name": "Lgogdownloader",
+      "urls": "https://github.com/Sude-/lgogdownloader",
+      "dscrp": "GOG.com downloader",
+      "cmd": [
+        ["sudo",
+        "zypper",
+        "ar",
+        "https://download.opensuse.org/repositories/games:tools/openSUSE_Tumbleweed/",
+        "games:tools"
+        ],
+        ["sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "lgogdownloader"
+        ]
+      ],
+      "cmd_desc": "install",
+      "id": "1"
+    },
+    {
+      "name": "Dhewm3",
+      "urls": "https://dhewm3.org/",
+      "dscrp": "Doom 3 demo on Dhewm3",
+      "cmd": [
+        ["sudo","mkdir","/usr/share/dhewm3"],
+        ["curl",
+        "-LJo",
+          "/tmp/Doom-3-Demo.png",
+          "https://raw.githubusercontent.com/techcoder20/RPIDoom3Installer/main/Doom3Demo.png"
+        ],
+        ["sudo","-S","mkdir","/usr/share/icons/custom"],
+        ["sudo","-S","mkdir","/usr/share/icons/custom/512x512"],
+        ["sudo","-S","mkdir","/usr/share/icons/custom/512x512/apps"],
+        ["sudo","-S","mv","/tmp/Doom-3-Demo.png","/usr/share/icons/custom/512x512/apps"],
+        ["sudo",
+          "-S",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+          "dhewm3"
+        ],
+        ["curl",
+        "-LJo",
+          "/tmp/doom3-linux-1.1.1286-demo.x86.run",
+          "https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-1.1.1286-demo.x86.run"
+        ],
+        ["sh","/tmp/doom3-linux-1.1.1286-demo.x86.run","--tar","xvf","demo/"],
+        ["sudo","-S","mv","demo/","/usr/share/dhewm3"],
+        [""]
+      ],
+      "cmd_desc": "install",
+      "id": "2"
+    },
+    {
+      "name": "UFO: Alien Invasion",
+      "urls": "https://ufoai.org/wiki/Download",
+      "dscrp": "X-COM like game",
+      "cmd": [
+        "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "ufoai"
+      ],
+      "cmd_desc": "install",
+      "id": "3"
+    },
+    {
+      "name": "dunelegacy",
+      "urls": "https://dunelegacy.sourceforge.net/website/",
+      "dscrp": "Dune 2 on dunelegacy linux port",
+      "cmd": [
+        ["sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "dunelegacy"
+        ],
+        ["curl",
+          "-LJo",
+          "/tmp/ATRE.PAK",
+        "http://www.fatejow.pl:8000/dune-2/ATRE.PAK",
+          "-LJo",
+          "/tmp/DUNE.PAK",
+        "http://www.fatejow.pl:8000/dune-2/DUNE.PAK",
+          "-LJo",
+          "/tmp/ENGLISH.PAK",
+        "http://www.fatejow.pl:8000/dune-2/ENGLISH.PAK",
+          "-LJo",
+          "/tmp/FINALE.PAK",
+        "http://www.fatejow.pl:8000/dune-2/FINALE.PAK",
+          "-LJo",
+          "/tmp/HARK.PAK",
+        "http://www.fatejow.pl:8000/dune-2/HARK.PAK",
+          "-LJo",
+          "/tmp/INTRO.PAK",
+        "http://www.fatejow.pl:8000/dune-2/INTRO.PAK",
+          "-LJo",
+          "/tmp/INTROVOC.PAK",
+        "http://www.fatejow.pl:8000/dune-2/INTROVOC.PAK",
+          "-LJo",
+          "/tmp/MENTAT.PAK",
+        "http://www.fatejow.pl:8000/dune-2/MENTAT.PAK",
+          "-LJo",
+          "/tmp/MERC.PAK",
+        "http://www.fatejow.pl:8000/dune-2/MERC.PAK",
+          "-LJo",
+          "/tmp/ORDOS.PAK",
+        "http://www.fatejow.pl:8000/dune-2/ORDOS.PAK",
+          "-LJo",
+          "/tmp/SCENARIO.PAK",
+        "http://www.fatejow.pl:8000/dune-2/SCENARIO.PAK",
+          "-LJo",
+          "/tmp/SOUND.PAK",
+        "http://www.fatejow.pl:8000/dune-2/SOUND.PAK",
+          "-LJo",
+          "/tmp/VOC.PAK",
+        "http://www.fatejow.pl:8000/dune-2/VOC.PAK"
+        ]
+      ],
+      "cmd_desc":"install",
+      "id": "4"
+    },
+    {
+      "name": "ECwolf",
+      "urls": "https://dunelegacy.sourceforge.net/website/",
+      "dscrp": "Wolf 3D on ECwolf",
+      "cmd": [
+        [
+          "sudo",
+        "zypper",
+        "-n",
+        "in",
+        "-l",
+        "ecwolf"
+        ],
+        [
+          "mkdir", "-p","/home/bart/.local/share/ecwolf"
+        ],
+        ["curl",
+          "-LJo",
+          "/tmp/Wolfenstein3D.tar.bz2",
+        "http://retro.adbito.pl/games/Wolfenstein3D.tar.bz2"
+        ],
+        [
+        "tar", "-jxf", "/tmp/Wolfenstein3D.tar.bz2", "--directory", "/home/bart/.local/share/ecwolf"
+        ]
+      ],
+      "cmd_desc":"install",
+      "id": "5"
+    }
+  ]
+}

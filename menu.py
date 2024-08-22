@@ -1,30 +1,26 @@
 import proc
-from jdct import jdct
+import strings
+import config_cmd
 
-MENU_INPT_STR = 'Select option: '
-FNAME_INPT_STR = 'Enter json name: '
-
-fname = input(FNAME_INPT_STR)
-with (open(fname) as json_strm):
-    jdct = jdct(json_strm)
+config = config_cmd.init_config()
 
 
 def main_menu():
-    for i in range(len(jdct.posn)):
+    for i in range(len(config['posn'])):
         while True:
-            main_menu_label()
+            display_menu()
             try:
-                what_do = int(input(MENU_INPT_STR))
+                opt = int(input(strings.SLCT_OPT))
             except ValueError:
                 proc.cls()
             else:
-                match what_do:
+                match opt:
                     case i:
-                        for j in range(len(jdct.posn[i]["cmd"])):
-                            proc.exe(jdct.posn[i]["cmd"][j])
+                        for j in range(len(config['posn'][i]["cmd"])):
+                            proc.exe(config['posn'][i]["cmd"][j])
 
 
-def main_menu_label():
-    print(jdct.json_name)
-    for i in range(len(jdct.posn)):
-        print(i, jdct.posn[i]["cmd_desc"], jdct.posn[i]["dscrp"])
+def display_menu():
+    print(config['json_name'])
+    for i in range(len(config['posn'])):
+        print(i, config['posn'][i]["cmd_desc"], config['posn'][i]["dscrp"])
